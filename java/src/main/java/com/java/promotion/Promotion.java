@@ -1,10 +1,11 @@
 package com.java.promotion;
+import java.util.Map;
 
 public class Promotion {
 		
 	public int checkForPromotion(Map<String, Integer> products) {
 		
-		
+		int promotionValue = 0;
 		if(products.containsKey("A")) {
 			while(products.get("A") >= 3) {
 				promotionValue = promotionValue + 130;
