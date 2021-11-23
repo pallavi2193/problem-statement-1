@@ -2,10 +2,15 @@ package com.java.promotion;
 import java.util.Map;
 
 public class Promotion {
-		
+	
+	int promotionValue = 0;
+	Product product = new Product();
+	
 	public int checkForPromotion(Map<String, Integer> products) {
 		
-		int promotionValue = 0;
+		int value = 0;
+		int total = 0;
+		
 		if(products.containsKey("A")) {
 			while(products.get("A") >= 3) {
 				promotionValue = promotionValue + 130;
@@ -29,9 +34,10 @@ public class Promotion {
 				products.put("D", value);
 			}
 		}
-		calculateProducts(products);
-		return promotionValue;
 		
-	}
+		total = promotionValue + product.calculateProducts(products);
+		
+		return total;
+		
 	}
 }
