@@ -29,7 +29,7 @@ public class Promotion {
 				products.put("D", value);
 			}
 		}
-		
+		calculateProducts(products);
 		return promotionValue;
 		
 	}
